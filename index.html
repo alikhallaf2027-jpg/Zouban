@@ -1,44 +1,65 @@
 <!DOCTYPE html>
-<html dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الرقم الموحد</title>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zouban Unified - الرقم الموحد</title>
 <style>
-body{background:#000;display:flex;justify-content:center;padding:10px}
-.box{width:100%;max-width:1000px;border:3px solid #d4af37;background:#0a0a0a;padding:15px;color:#f5e6a0;font-family:monospace;box-shadow:0 0 25px #d4af3755}
-.row{display:grid;grid-template-columns:90px 1fr 50px 50px 110px 110px 110px;border:1px solid #d4af37}
-.row div{border-left:1px solid #5a4a1a;padding:8px;text-align:center;display:flex;align-items:center;justify-content:center}
-input{width:95%;background:#1a1a1a;border:1px dashed #d4af37;color:#fff;text-align:center;padding:4px;outline:none}
-input:focus{background:#2a2300;border-color:#ffdf75}
-button{background:linear-gradient(#d4af37,#8c6a0a);border:none;color:#000;padding:10px 16px;font-weight:bold;border-radius:6px;margin:4px;cursor:pointer;font-family:monospace}
-button:active{transform:scale(0.95)}
-.result{margin-top:15px;background:#000;border:1px solid #d4af37;padding:12px;color:#00ff88;min-height:50px;white-space:pre-wrap;direction:ltr;text-align:left;font-size:14px}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#050505;color:#FFD700;font-family:'Cairo',sans-serif;text-align:center}
+.header{padding:15px;border-bottom:2px solid #FFD700}
+.header h1{font-size:26px;font-weight:900}
+.header h2{font-size:13px;color:#fff;letter-spacing:3px}
+.wrap{max-width:1200px;margin:10px auto;padding:10px;display:grid;grid-template-columns:90px 1fr 90px;gap:10px}
+.obelisk{height:680px;background:linear-gradient(#FFD700,#6b5300);border:1px solid #FFD700}
+.box{border:2px solid #FFD700;background:#0a0a0a;padding:8px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #FFD700;padding:5px;font-size:11px}
+th{background:#1a1a1a}
+.gold{color:#FFD700;font-weight:900;background:#1a1500}
+input{width:100%;padding:12px;background:#000;border:2px solid #FFD700;color:#FFD700;text-align:center;direction:ltr;font-family:monospace;margin:10px 0;font-size:14px}
+.btns{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px}
+.btns button{background:linear-gradient(#FFD700,#9c7600);border:none;padding:10px;font-weight:900;color:#000;border-radius:4px;cursor:pointer;font-family:'Cairo'}
+#out{background:#000;border:1px dashed #FFD700;min-height:80px;margin-top:8px;padding:10px;color:#00ff88;font-family:monospace;direction:ltr;text-align:left;white-space:pre-wrap;font-size:12px}
+.bot{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:8px}
+.bot div{border:1px solid #FFD700;padding:5px;background:#FFD700;color:#000;font-weight:900;font-size:10px}
+@media(max-width:800px){.wrap{grid-template-columns:1fr}.obelisk{display:none}.btns{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
+<div class="header">
+<h1>الرقم الموحد - نظام زوبان الموحد</h1>
+<h2>ZOUBAN UNIFIED NUMBER SYSTEM</h2>
+</div>
+<div class="wrap">
+<div class="obelisk"></div>
 <div class="box">
-<div style="text-align:center;color:#d4af37;font-size:28px;line-height:1.2">الرقم الموحد<br><span style="font-size:16px">ZOUBAN UNIFIED NUMBER SYSTEM</span></div>
-
-<div class="row"><div>المستوى 5</div><div><input id="mainZBN" value="ZBN-5A-7742-901K-88XP"></div><div><input value="A"></div><div><input value="B"></div><div><input value="KHP"></div><div><input value="HLQ"></div><div><input value="KTS"></div></div>
-<div class="row"><div>المستوى 4</div><div><input value="ZBN-4C-5531-220B-77MN"></div><div><input value="B"></div><div><input value="C"></div><div><input value="HMR"></div><div><input value="HLB"></div><div><input value="KTN"></div></div>
-<div class="row"><div>المستوى 3</div><div><input value="ZBN-3E-6677-554C-33PQ"></div><div><input value="E"></div><div><input value="O"></div><div><input value="HMN"></div><div><input value="HME"></div><div><input value="KTM"></div></div>
-<div class="row"><div>المستوى 2</div><div><input value="ZBN-3B-9918-443D-22QR"></div><div><input value="K"></div><div><input value="M"></div><div><input value="HST"></div><div><input value="HLC"></div><div><input value="KTW"></div></div>
-<div class="row"><div>المستوى 1</div><div><input value="ZBN-2D-3367-778E-44ST"></div><div><input value="D"></div><div><input value="N"></div><div><input value="HSW"></div><div><input value="HLD"></div><div><input value="KTF"></div></div>
-<div class="row" style="background:#d4af37;color:#000;font-weight:bold"><div>ريشة (18)</div><div>بلوك (1)</div><div>ضلع (1)</div><div>هرم (3)</div><div>هلال (3)</div><div>خرطوش (3)</div><div>النوع</div></div>
-
-<div style="text-align:center;margin-top:15px">
-<button onclick="toDecimal()">إلى عشري</button>
-<button onclick="toBinary()">01 إلى ثنائي 01</button>
-<button onclick="toCore()">إلى كور</button>
+<table>
+<tr><th>المستوى</th><th>كود ZBN</th><th>D</th><th>N</th><th>HSW</th><th>KHP</th><th>رمز كور</th></tr>
+<tr><td>المستوى 5</td><td class="gold">ZBN-5A-7742-901K-88XP</td><td>A</td><td>B</td><td class="gold">KHP</td><td>HLQ</td><td>KTS</td></tr>
+<tr><td>المستوى 4</td><td>ZBN-4C-5531-220B-77MN</td><td>B</td><td>C</td><td>HMR</td><td>HLB</td><td>KTN</td></tr>
+<tr><td>المستوى 3</td><td>ZBN-3E-6677-554C-33PQ</td><td>E</td><td>O</td><td>HMN</td><td>HME</td><td>KTM</td></tr>
+<tr><td>المستوى 2</td><td>ZBN-3B-9918-443D-22QR</td><td>K</td><td>M</td><td>HST</td><td>HLC</td><td>KTW</td></tr>
+<tr><td>المستوى 1</td><td>ZBN-2D-3367-778E-44ST</td><td>D</td><td>N</td><td>HSW</td><td>HLD</td><td>KTF</td></tr>
+</table>
+<input id="code" value="ZBN-5A-7742-901K-88XP">
+<div class="btns">
+<button onclick="go('all')">تحويل</button>
+<button onclick="go('dec')">إلى عشري</button>
+<button onclick="go('bin')">01 إلى ثنائي 01</button>
+<button onclick="go('core')">إلى كور</button>
 </div>
-
-<div id="out" class="result">النتيجة هتظهر هنا... اكتب ZBN-5A-7742-901K-88XP فوق ودوس أي زر</div>
+<div id="out">جاهز - اكتب الكود ودوس تحويل</div>
+<div class="bot">
+<div>ريشة (18)</div><div>بلوك (1)</div><div>ضلع (1)</div><div>هرم (3)</div><div>هلال (3)</div><div>خرطوش (3)</div>
 </div>
-
+</div>
+<div class="obelisk"></div>
+</div>
 <script>
-function getCode(){
-  return document.getElementById('mainZBN').value.trim();
-}
-function toDecimal(){
-  let code = getCode();
-  let nums = code.match(/\d+/g);
-  let dec = nums ? nums.join('') : '0';
-  document.getElementById('out').textContent = 'ZBN: ' + code + '\n→
+function toDec(s){s=s.toUpperCase().replace(/[^A-Z0-9]/g,'');let n=0;for(let i=0;i<s.length;i++){let c=s.charCodeAt(i);let v=c<=57?c-48:c-55;n=(n*36+v)%9999999999}return n}
+function go(t){let v=document.getElementById('code').value.trim();let d=toDec(v);let b=d.toString(2).padStart(32,'0');let lvl='5';if(v.includes('4C'))lvl='4';else if(v.includes('3E'))lvl='3';else if(v.includes('3B'))lvl='2';else if(v.includes('2D'))lvl='1';let m={5:'KHP / HLQ / KTS - النواة الملكية',4:'HMR / HLB / KTN',3:'HMN / HME / KTM',2:'HST / HLC / KTW',1:'HSW / HLD / KTF'};let out='';if(t=='dec'||t=='all')out+='DECIMAL: '+d+'\n';if(t=='bin'||t=='all')out+='BINARY: '+b+'\n'+b.match(/.{1,8}/g).join(' ')+'\n';if(t=='core'||t=='all')out+='CORE LEVEL '+lvl+': '+m[lvl]+'\n';out+='\nSRC: '+v;document.getElementById('out').textContent=out}go('all');
+</script>
+</body>
+</html>
