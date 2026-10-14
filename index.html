@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الرقم الموحد</title>
+<style>
+body{background:#000;display:flex;justify-content:center;padding:10px}
+.box{width:100%;max-width:1000px;border:3px solid #d4af37;background:#0a0a0a;padding:15px;color:#f5e6a0;font-family:monospace;box-shadow:0 0 25px #d4af3755}
+.row{display:grid;grid-template-columns:90px 1fr 50px 50px 110px 110px 110px;border:1px solid #d4af37}
+.row div{border-left:1px solid #5a4a1a;padding:8px;text-align:center;display:flex;align-items:center;justify-content:center}
+input{width:95%;background:#1a1a1a;border:1px dashed #d4af37;color:#fff;text-align:center;padding:4px;outline:none}
+input:focus{background:#2a2300;border-color:#ffdf75}
+button{background:linear-gradient(#d4af37,#8c6a0a);border:none;color:#000;padding:10px 16px;font-weight:bold;border-radius:6px;margin:4px;cursor:pointer;font-family:monospace}
+button:active{transform:scale(0.95)}
+.result{margin-top:15px;background:#000;border:1px solid #d4af37;padding:12px;color:#00ff88;min-height:50px;white-space:pre-wrap;direction:ltr;text-align:left;font-size:14px}
+</style>
+</head>
+<body>
+<div class="box">
+<div style="text-align:center;color:#d4af37;font-size:28px;line-height:1.2">الرقم الموحد<br><span style="font-size:16px">ZOUBAN UNIFIED NUMBER SYSTEM</span></div>
+
+<div class="row"><div>المستوى 5</div><div><input id="mainZBN" value="ZBN-5A-7742-901K-88XP"></div><div><input value="A"></div><div><input value="B"></div><div><input value="KHP"></div><div><input value="HLQ"></div><div><input value="KTS"></div></div>
+<div class="row"><div>المستوى 4</div><div><input value="ZBN-4C-5531-220B-77MN"></div><div><input value="B"></div><div><input value="C"></div><div><input value="HMR"></div><div><input value="HLB"></div><div><input value="KTN"></div></div>
+<div class="row"><div>المستوى 3</div><div><input value="ZBN-3E-6677-554C-33PQ"></div><div><input value="E"></div><div><input value="O"></div><div><input value="HMN"></div><div><input value="HME"></div><div><input value="KTM"></div></div>
+<div class="row"><div>المستوى 2</div><div><input value="ZBN-3B-9918-443D-22QR"></div><div><input value="K"></div><div><input value="M"></div><div><input value="HST"></div><div><input value="HLC"></div><div><input value="KTW"></div></div>
+<div class="row"><div>المستوى 1</div><div><input value="ZBN-2D-3367-778E-44ST"></div><div><input value="D"></div><div><input value="N"></div><div><input value="HSW"></div><div><input value="HLD"></div><div><input value="KTF"></div></div>
+<div class="row" style="background:#d4af37;color:#000;font-weight:bold"><div>ريشة (18)</div><div>بلوك (1)</div><div>ضلع (1)</div><div>هرم (3)</div><div>هلال (3)</div><div>خرطوش (3)</div><div>النوع</div></div>
+
+<div style="text-align:center;margin-top:15px">
+<button onclick="toDecimal()">إلى عشري</button>
+<button onclick="toBinary()">01 إلى ثنائي 01</button>
+<button onclick="toCore()">إلى كور</button>
+</div>
+
+<div id="out" class="result">النتيجة هتظهر هنا... اكتب ZBN-5A-7742-901K-88XP فوق ودوس أي زر</div>
+</div>
+
+<script>
+function getCode(){
+  return document.getElementById('mainZBN').value.trim();
+}
+function toDecimal(){
+  let code = getCode();
+  let nums = code.match(/\d+/g);
+  let dec = nums ? nums.join('') : '0';
+  document.getElementById('out').textContent = 'ZBN: ' + code + '\n→
