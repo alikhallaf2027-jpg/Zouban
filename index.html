@@ -1,146 +1,114 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الرقم الموحد - ZOUBAN</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الرقم الموحد - ZOUBAN FINAL 30 + VALUES + CORE</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;font-family:'Cairo';display:flex;justify-content:center;padding:4px;min-height:100vh}
-.main{position:relative;width:100%;max-width:1250px;background:#000;border:3px solid #b8860b;border-radius:12px;box-shadow:0 0 40px rgba(255,215,0,0.3);overflow:hidden}
-.obelisk{position:absolute;top:0;bottom:0;width:84px;background:linear-gradient(180deg,#ffea70,#d4a017,#8a6a00,#d4a017,#5a4500);z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:12px 4px;border-left:2px solid #ffd700;border-right:2px solid #ffd700}
-.obelisk.left{left:0}.obelisk.right{right:0}
-.obelisk.pyr{width:0;height:0;border-left:38px solid transparent;border-right:38px solid transparent;border-bottom:42px solid #ffea70}
-.obelisk.hier{writing-mode:vertical-rl;color:#2a1a00;font-weight:900;font-size:13px}
-.obelisk.base{width:70px;height:14px;background:#1a0f00;border:2px solid #b8860b}
-.content{position:relative;z-index:5;padding:10px 95px 12px}
-@media(max-width:800px){.content{padding:8px 54px}.obelisk{width:54px}}
-.header{text-align:center;padding:2px 0 10px;border-bottom:2px solid rgba(255,215,0,0.3)}
-.header.wings{font-size:22px;color:gold}.header h1{font-size:32px;font-weight:900;color:#ffd700;text-shadow:0 0 20px #ffae00;margin:0}
-.header.sub{font-size:13px;letter-spacing:3px;color:#e6c86a}
-.grid{display:flex;flex-direction:column;gap:7px;margin-top:12px}
-.row{display:grid;grid-template-columns:78px 1fr 50px 50px 108px 108px 108px;gap:7px;align-items:center}
-@media(max-width:950px){.row{grid-template-columns:64px 1fr 40px 40px 68px 68px 68px;gap:4px}}
-.lbl{color:#e8c97a;font-size:12px;font-weight:700;text-align:right}
-.box{background:linear-gradient(180deg,#151500,#000);border:2px solid #7a6200;border-radius:8px;box-shadow:0 0 12px rgba(255,215,0,0.18)}
-.box:focus-within{border-color:#ffd700;box-shadow:0 0 22px rgba(255,215,0,0.55)}
-.box input{width:100%;background:transparent;border:none;outline:none;color:#fff8cc;font-family:monospace;font-size:12px;font-weight:700;text-align:center;padding:11px 2px}
-.footer{display:grid;grid-template-columns:78px 1fr 50px 50px 108px 108px 108px;gap:7px;margin-top:10px}
-@media(max-width:950px){.footer{grid-template-columns:64px 1fr 40px 40px 68px 68px 68px;gap:4px}}
-.fcard{background:linear-gradient(180deg,#1c1600,#000);border:2px solid #b8860b;border-radius:10px;padding:10px 2px;text-align:center}
-.fcard.ico{font-size:26px;display:block}.fcard.t{font-size:10px;color:#d4b86a;font-weight:700;margin-top:4px;display:block}
+body{background:#000;font-family:'Cairo',sans-serif;display:flex;justify-content:center;padding:8px}
+.wrap{width:100%;max-width:1180px;background:#000;border:3px solid #d4af37;border-radius:16px;position:relative;box-shadow:0 0 60px rgba(212,175,55,.5);overflow:hidden}
+.obe{position:absolute;top:0;bottom:0;width:86px;background:linear-gradient(180deg,#ffef9a,#d4a017 18%,#7a5a00 45%,#e0b02e 78%,#4a3600);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:10px 0;z-index:10}
+.obe.l{left:0;border-right:2px solid gold;border-radius:0 12px 12px 0}.obe.r{right:0;border-left:2px solid gold;border-radius:12px 0 0 12px}
+.mid{padding:12px 100px 14px;position:relative;z-index:5}
+.head{text-align:center;border-bottom:2px solid #5a4d00;padding-bottom:10px;margin-bottom:10px}
+.head h1{font-size:34px;font-weight:900;color:#ffdd55;text-shadow:0 0 18px #ffae00}.head p{font-size:11px;letter-spacing:2px;color:#d2b56a}
+.row{display:grid;grid-template-columns:72px 1fr 48px 48px 96px 96px 96px;gap:7px;margin-bottom:8px;align-items:center}
+.lab{color:#f5e6a0;font-size:12px;font-weight:800}
+.bx{background:radial-gradient(ellipse at center,#1c1c00,#000);border:2px solid #c9a227;border-radius:9px;height:50px;display:flex;box-shadow:0 0 10px rgba(255,215,0,.25)}
+.bx:focus-within{border-color:#ffe55a;box-shadow:0 0 20px rgba(255,229,90,.6)}
+.bx input{width:100%;background:0 0;border:0;outline:0;color:#fff6c0;font-family:monospace;font-size:12px;font-weight:800;text-align:center}
+.foot{display:grid;grid-template-columns:72px 1fr 48px 48px 96px 96px 96px;gap:7px;margin-top:12px}
+.card{background:linear-gradient(180deg,#1f1a00,#0a0800);border:2px solid #b8921a;border-radius:10px;height:70px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.card .ic{font-size:24px;filter:drop-shadow(0 0 5px gold)}.card .tx{font-size:10px;color:#d4bc72;font-weight:800;margin-top:2px}
 .btns{display:flex;gap:10px;justify-content:center;margin:16px 0 10px;flex-wrap:wrap}
-.btn{padding:10px 20px;border-radius:20px;border:none;font-family:'Cairo';font-weight:900;font-size:13px;cursor:pointer;background:linear-gradient(180deg,#ffe88a,#d4a017,#8a6a00);color:#000}
-.panels{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
-@media(max-width:700px){.panels{grid-template-columns:1fr}}
-.panel{background:#0a0a00;border:1px solid #5a4a00;border-radius:10px;padding:8px}
-.panel h3{color:#ffd700;font-size:11px;margin:0 0 5px}
-.ta{width:100%;background:#000;color:#ffe9a0;border:1px solid #3a2a00;border-radius:7px;padding:7px;font-family:monospace;font-size:10px;direction:ltr;word-break:break-all;min-height:74px;resize:vertical}
-.coreVis{font-size:18px;letter-spacing:3px;background:#000;border:1px solid #3a2a00;border-radius:7px;padding:8px;min-height:60px;word-break:break-all;line-height:1.9}
+.btn{padding:10px 20px;border-radius:20px;border:2px solid #9a7d22;background:linear-gradient(180deg,#ffef9a,#d4a017 60%,#7a5900);color:#1a1200;font-weight:900;font-family:'Cairo';font-size:12px;cursor:pointer;box-shadow:0 4px 14px rgba(255,215,0,.3)}
+.pans{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.pan{background:#080700;border:1px solid #3a2e00;border-radius:10px;padding:8px}
+.pan h3{color:#ffd84d;font-size:10px;margin-bottom:5px}
+.ta{width:100%;min-height:90px;background:#000;color:#ffe8a0;border:1px solid #2a2300;border-radius:8px;padding:7px;font-family:monospace;font-size:10px;direction:ltr;word-break:break-all;resize:vertical}
+.core{font-size:17px;line-height:1.7;letter-spacing:2px;background:#000;border:1px solid #2a2300;border-radius:8px;padding:8px;min-height:50px;word-break:break-all}
+@media(max-width:820px){.mid{padding:8px 58px}.row,.foot{grid-template-columns:58px 1fr 38px 38px 62px 62px 62px;gap:4px}.bx{height:44px}.bx input{font-size:10px}.obe{width:52px}}
 </style>
 </head>
 <body>
-<div class="main">
-<div class="obelisk left"><div class="pyr"></div><div class="hier">ZOUBAN 𓂀</div><div class="base"></div></div>
-<div class="obelisk right"><div class="pyr"></div><div class="hier">ZOUBAN 𓂀</div><div class="base"></div></div>
-<div class="content">
-<div class="header"><div class="wings">🪽</div><h1>الرقم الموحد</h1><div class="sub">ZOUBAN UNIFIED NUMBER SYSTEM</div></div>
-<div class="grid" id="grid"></div>
-<div class="footer" id="foot"></div>
+<div class="wrap">
+<div class="obe l"><div style="width:0;height:0;border-left:34px solid transparent;border-right:34px solid transparent;border-bottom:38px solid #ffef9a;filter:drop-shadow(0 0 6px gold)"></div><div style="writing-mode:vertical-rl;font-weight:900;color:#2a1d00;font-size:12px;letter-spacing:3px">𓂀 ZOUBAN 𓋹</div><div style="width:66px;height:12px;background:#1c1400;border:1px solid #a6861e"></div></div>
+<div class="obe r"><div style="width:0;height:0;border-left:34px solid transparent;border-right:34px solid transparent;border-bottom:38px solid #ffef9a;filter:drop-shadow(0 0 6px gold)"></div><div style="writing-mode:vertical-rl;font-weight:900;color:#2a1d00;font-size:12px;letter-spacing:3px">𓂀 ZOUBAN 𓋹</div><div style="width:66px;height:12px;background:#1c1400;border:1px solid #a6861e"></div></div>
+<div class="mid">
+<div class="head"><div style="font-size:26px;filter:drop-shadow(0 0 10px gold)">🪽</div><h1>الرقم الموحد</h1><p>ZOUBAN UNIFIED NUMBER SYSTEM</p></div>
+<div id="grid"></div>
+<div class="foot" id="foot"></div>
 <div class="btns">
 <button class="btn" onclick="calc()">تحويل</button>
 <button class="btn" onclick="calc()">إلى عشري</button>
-<button class="btn" onclick="toBinAction()">01 إلى ثنائي 01</button>
-<button class="btn" onclick="toCoreAction()">إلى كور</button>
+<button class="btn" onclick="toBin()">01 إلى ثنائي 01</button>
+<button class="btn" onclick="toCore()">إلى كور</button>
 </div>
-<div class="panels">
-<div class="panel"><h3>🔢 عشري كبير - 145 خانة</h3><textarea id="dec" class="ta"></textarea><div id="dInfo" style="font-size:9px;color:#8a7a4a;margin-top:4px"></div></div>
-<div class="panel"><h3>💻 ثنائي 01 - بالمئات</h3><textarea id="bin" class="ta"></textarea><div id="bInfo" style="font-size:9px;color:#8a7a4a;margin-top:4px"></div></div>
-<div class="panel" style="grid-column:1/-1"><h3>👁️ كور - 🪶=0 🧱=1</h3><div id="coreV" class="coreVis"></div><textarea id="coreR" class="ta" rows="2"></textarea></div>
-<div class="panel" style="grid-column:1/-1"><h3>📊 تفصيلة قيمة كل خانة</h3><textarea id="detail" class="ta" rows="6"></textarea></div>
+<div class="pans">
+<div class="pan"><h3>🔢 عشري كبير - 146 رقم (القيمة محفوظة)</h3><textarea id="dec" class="ta"></textarea><div id="dinfo" style="font-size:9px;color:#7a6a3a;margin-top:4px"></div></div>
+<div class="pan"><h3>💻 ثنائي 01 (القيمة محفوظة)</h3><textarea id="bin" class="ta"></textarea><div id="binfo" style="font-size:9px;color:#7a6a3a;margin-top:4px"></div></div>
+<div class="pan" style="grid-column:1/-1"><h3>👁️ كور - 🪶 ريشة=0 🧱 بلوك=1 (الكور محفوظ)</h3><div id="coreV" class="core"></div><textarea id="coreR" class="ta" style="min-height:56px;margin-top:6px"></textarea></div>
+<div class="pan" style="grid-column:1/-1"><h3>📊 تفصيلة الـ 30 خانة - 6 رموز ذهبية</h3><textarea id="detail" class="ta" style="min-height:160px"></textarea></div>
 </div>
 </div>
 </div>
 <script>
 const F20=2432902008176640000n, BW=1000000000000000000n, DW=F20, HW=DW*6n, HLW=HW*1000n, KW=HLW*1000n, B=6000000000n*F20;
-const lvData=[
-{id:5,label:'5 المستوى',zbn:'ZBN-5A-7742-901K-88XP',b:'A',d:'B',h:'KHP',hl:'HLQ',k:'KTS'},
-{id:4,label:'4 المستوى',zbn:'ZBN-4C-5531-220B-77MN',b:'B',d:'C',h:'HMR',hl:'HLB',k:'KTN'},
-{id:3,label:'3 المستوى',zbn:'ZBN-3E-6677-554C-33PQ',b:'E',d:'O',h:'HMN',hl:'HME',k:'KTM'},
-{id:2,label:'2 المستوى',zbn:'ZBN-3B-9918-443D-22QR',b:'K',d:'M',h:'HST',hl:'HLC',k:'KTW'},
-{id:1,label:'1 المستوى',zbn:'ZBN-2D-3367-778E-44ST',b:'D',d:'N',h:'HSW',hl:'HLD',k:'KTF'}];
-function charVal(s){s=(s||'0').toUpperCase();let v=0;for(let c of s){if(c>='0'&&c<='9')v=v*36+parseInt(c);else if(c>='A'&&c<='Z')v=v*36+(c.charCodeAt(0)-55);}return v;}
+const LV=[
+{id:5,lb:'5 المستوى',zbn:'ZBN-5A-7742-901K-88XP',b:'A',c:'B',h:'KHP',hl:'HLQ',k:'KTS'},
+{id:4,lb:'4 المستوى',zbn:'ZBN-4C-5531-220B-77MN',b:'B',c:'C',h:'HMR',hl:'HLB',k:'KTN'},
+{id:3,lb:'3 المستوى',zbn:'ZBN-3E-6677-554C-33PQ',b:'E',c:'O',h:'HMN',hl:'HME',k:'KTM'},
+{id:2,lb:'2 المستوى',zbn:'ZBN-3B-9918-443D-22QR',b:'K',c:'M',h:'HST',hl:'HLC',k:'KTW'},
+{id:1,lb:'1 المستوى',zbn:'ZBN-2D-3367-778E-44ST',b:'D',c:'N',h:'HSW',hl:'HLD',k:'KTF'}];
+function charVal(s){s=(s||'0').toUpperCase();let v=0;for(let ch of s){if(ch>='0'&&ch<='9')v=v*36+(ch.charCodeAt(0)-48);else if(ch>='A'&&ch<='Z')v=v*36+(ch.charCodeAt(0)-55);}return v;}
 function build(){
-const g=document.getElementById('grid'); g.innerHTML='';
-lvData.forEach(L=>{
-const row=document.createElement('div'); row.className='row';
-row.innerHTML=`<div class="lbl">${L.label}</div>
-<div class="box"><input id="zbn${L.id}" value="${L.zbn}" oninput="syncFromZBN(${L.id});calc()"></div>
-<div class="box"><input id="b${L.id}" value="${L.b}" oninput="calc()"></div>
-<div class="box"><input id="d${L.id}" value="${L.d}" oninput="calc()"></div>
-<div class="box"><input id="h${L.id}" value="${L.h}" oninput="calc()"></div>
-<div class="box"><input id="hl${L.id}" value="${L.hl}" oninput="calc()"></div>
-<div class="box"><input id="k${L.id}" value="${L.k}" oninput="calc()"></div>`;
-g.appendChild(row);
+let g=document.getElementById('grid');g.innerHTML='';
+LV.forEach(L=>{
+let r=document.createElement('div');r.className='row';
+r.innerHTML=`<div class="lab">${L.lb}</div>
+<div class="bx"><input id="zbn${L.id}" value="${L.zbn}" oninput="calc()"></div>
+<div class="bx"><input id="b${L.id}" value="${L.b}" oninput="calc()"></div>
+<div class="bx"><input id="c${L.id}" value="${L.c}" oninput="calc()"></div>
+<div class="bx"><input id="h${L.id}" value="${L.h}" oninput="calc()"></div>
+<div class="bx"><input id="hl${L.id}" value="${L.hl}" oninput="calc()"></div>
+<div class="bx"><input id="k${L.id}" value="${L.k}" oninput="calc()"></div>`;
+g.appendChild(r);
 });
-document.getElementById('foot').innerHTML=`<div></div>
-<div class="fcard"><span class="ico">🪶</span><span class="t">ريشة (18)</span></div>
-<div class="fcard"><span class="ico">🧱</span><span class="t">بلوك (1)</span></div>
-<div class="fcard"><span class="ico">🔺</span><span class="t">ضلع (1)</span></div>
-<div class="fcard"><span class="ico">🔻</span><span class="t">هرم (3)</span></div>
-<div class="fcard"><span class="ico">🌙</span><span class="t">هلال (3)</span></div>
-<div class="fcard"><span class="ico">🏺</span><span class="t">خرطوش (3)</span></div>`;
-}
-function getLevel(id){
-let z=document.getElementById(`zbn${id}`).value||'';
-let nums=z.replace(/[^0-9]/g,'').slice(-12);
-let r=nums?BigInt(nums):0n;
-let b=BigInt(charVal(document.getElementById(`b${id}`).value)%10);
-let d=BigInt(charVal(document.getElementById(`d${id}`).value)%10);
-let h=BigInt(charVal(document.getElementById(`h${id}`).value)%1000);
-let hl=BigInt(charVal(document.getElementById(`hl${id}`).value)%1000);
-let k=BigInt(charVal(document.getElementById(`k${id}`).value)%1000);
-let v=r + b*BW + d*DW + h*HW + hl*HLW + k*KW;
-return {r,b,d,h,hl,k,v};
+document.getElementById('foot').innerHTML=`<div class="lab"></div>
+<div class="card"><span class="ic">🪶</span><span class="tx">ريشة (18)</span></div>
+<div class="card"><span class="ic">🧱</span><span class="tx">بلوك (1)</span></div>
+<div class="card"><span class="ic">🔺</span><span class="tx">ضلع (1)</span></div>
+<div class="card"><span class="ic">🔻</span><span class="tx">هرم (3)</span></div>
+<div class="card"><span class="ic">🌙</span><span class="tx">هلال (3)</span></div>
+<div class="card"><span class="ic">🏺</span><span class="tx">خرطوش (3)</span></div>`;
 }
 function calc(){
-let total=0n,pow=1n,det='';
-for(let i=1;i<=5;i++){
-let L=getLevel(i);
-det+=`مستوى ${i}: ريشة=${L.r} بلوك=${L.b} ضلع=${L.d} هرم=${L.h} هلال=${L.hl} خرطوش=${L.k} => ${L.v}\n`;
-total+=L.v*pow; pow*=B;
-}
-let bin=total.toString(2);
-let core=''; for(let ch of bin) core+=ch==='1'?'🧱':'🪶';
+let total=0n; let det='';
+LV.forEach(L=>{
+let z=document.getElementById('zbn'+L.id).value||'0';
+let bv=charVal(document.getElementById('b'+L.id).value);
+let cv=charVal(document.getElementById('c'+L.id).value);
+let hv=charVal(document.getElementById('h'+L.id).value);
+let hlv=charVal(document.getElementById('hl'+L.id).value);
+let kv=charVal(document.getElementById('k'+L.id).value);
+let zv=BigInt(charVal(z)%1000000);
+let v=zv+BigInt(bv)*BW+BigInt(cv)*DW+BigInt(hv)*HW+BigInt(hlv)*HLW+BigInt(kv)*KW;
+total+=v*B;
+det+=`م${L.id}: ZBN=${z} | B=${bv} C=${cv} H=${hv} HL=${hlv} K=${kv} => ${v}\n`;
+});
 document.getElementById('dec').value=total.toString();
-document.getElementById('dInfo').innerText=`${total.toString().length} رقم عشري | B=${B}`;
-document.getElementById('bin').value=bin;
-document.getElementById('bInfo').innerText=`${bin.length} بت ثنائي | ${Math.ceil(bin.length/8)} بايت`;
-document.getElementById('coreV').innerText=core;
-document.getElementById('coreR').value=core;
-document.getElementById('detail').value=det+`\nالمجموع:\n${total}\n\nثنائي:\n${bin}\n\nكور:\n${core}`;
+document.getElementById('dinfo').innerText='طول: '+total.toString().length+' رقم - القيمة محفوظة';
+document.getElementById('detail').value=det+'\nالإجمالي: '+total;
+toBin(); toCore();
 }
-function syncFromZBN(id){
-let z=document.getElementById(`zbn${id}`).value;
-let p=z.split('-');
-if(p[1]){document.getElementById(`b${id}`).value=p[1][0]||'A'; document.getElementById(`d${id}`).value=p[1][1]||'B';}
-if(p[2]) document.getElementById(`h${id}`).value=p[2].slice(0,3);
-if(p[3]){document.getElementById(`hl${id}`).value=p[3].slice(0,3); document.getElementById(`k${id}`).value=p[3].slice(3,6)||'XP';}
+function toBin(){
+let d=document.getElementById('dec').value; if(!d)return; try{let b=BigInt(d).toString(2); document.getElementById('bin').value=b; document.getElementById('binfo').innerText='طول: '+b.length+' بت';}catch(e){}
 }
-function toBinAction(){
-let b=document.getElementById('bin').value.replace(/[^01]/g,'');
-if(b.length<2) return calc();
-let dec=BigInt('0b'+b);
-document.getElementById('dec').value=dec.toString();
-calc();
+function toCore(){
+let b=document.getElementById('bin').value; if(!b)return; let core=b.replace(/0/g,'🪶').replace(/1/g,'🧱'); document.getElementById('coreV').innerText=core; document.getElementById('coreR').value=core;
 }
-function toCoreAction(){
-let c=document.getElementById('coreR').value;
-let bin=''; for(let ch of c){if(ch==='🧱') bin+='1'; else if(ch==='🪶') bin+='0';}
-if(bin){document.getElementById('bin').value=bin; toBinAction();}
-}
-window.onload=()=>{build();calc();}
+build(); calc();
 </script>
 </body>
 </html>
