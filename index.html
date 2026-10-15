@@ -2,113 +2,118 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الرقم الموحد - ZOUBAN FINAL 30 + VALUES + CORE</title>
+<title>الرقم الموحد - ZOUBAN 30 خانه</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;font-family:'Cairo',sans-serif;display:flex;justify-content:center;padding:8px}
-.wrap{width:100%;max-width:1180px;background:#000;border:3px solid #d4af37;border-radius:16px;position:relative;box-shadow:0 0 60px rgba(212,175,55,.5);overflow:hidden}
-.obe{position:absolute;top:0;bottom:0;width:86px;background:linear-gradient(180deg,#ffef9a,#d4a017 18%,#7a5a00 45%,#e0b02e 78%,#4a3600);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:10px 0;z-index:10}
-.obe.l{left:0;border-right:2px solid gold;border-radius:0 12px 12px 0}.obe.r{right:0;border-left:2px solid gold;border-radius:12px 0 0 12px}
-.mid{padding:12px 100px 14px;position:relative;z-index:5}
-.head{text-align:center;border-bottom:2px solid #5a4d00;padding-bottom:10px;margin-bottom:10px}
-.head h1{font-size:34px;font-weight:900;color:#ffdd55;text-shadow:0 0 18px #ffae00}.head p{font-size:11px;letter-spacing:2px;color:#d2b56a}
-.row{display:grid;grid-template-columns:72px 1fr 48px 48px 96px 96px 96px;gap:7px;margin-bottom:8px;align-items:center}
-.lab{color:#f5e6a0;font-size:12px;font-weight:800}
-.bx{background:radial-gradient(ellipse at center,#1c1c00,#000);border:2px solid #c9a227;border-radius:9px;height:50px;display:flex;box-shadow:0 0 10px rgba(255,215,0,.25)}
-.bx:focus-within{border-color:#ffe55a;box-shadow:0 0 20px rgba(255,229,90,.6)}
-.bx input{width:100%;background:0 0;border:0;outline:0;color:#fff6c0;font-family:monospace;font-size:12px;font-weight:800;text-align:center}
-.foot{display:grid;grid-template-columns:72px 1fr 48px 48px 96px 96px 96px;gap:7px;margin-top:12px}
-.card{background:linear-gradient(180deg,#1f1a00,#0a0800);border:2px solid #b8921a;border-radius:10px;height:70px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.card .ic{font-size:24px;filter:drop-shadow(0 0 5px gold)}.card .tx{font-size:10px;color:#d4bc72;font-weight:800;margin-top:2px}
-.btns{display:flex;gap:10px;justify-content:center;margin:16px 0 10px;flex-wrap:wrap}
-.btn{padding:10px 20px;border-radius:20px;border:2px solid #9a7d22;background:linear-gradient(180deg,#ffef9a,#d4a017 60%,#7a5900);color:#1a1200;font-weight:900;font-family:'Cairo';font-size:12px;cursor:pointer;box-shadow:0 4px 14px rgba(255,215,0,.3)}
-.pans{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-.pan{background:#080700;border:1px solid #3a2e00;border-radius:10px;padding:8px}
-.pan h3{color:#ffd84d;font-size:10px;margin-bottom:5px}
-.ta{width:100%;min-height:90px;background:#000;color:#ffe8a0;border:1px solid #2a2300;border-radius:8px;padding:7px;font-family:monospace;font-size:10px;direction:ltr;word-break:break-all;resize:vertical}
-.core{font-size:17px;line-height:1.7;letter-spacing:2px;background:#000;border:1px solid #2a2300;border-radius:8px;padding:8px;min-height:50px;word-break:break-all}
-@media(max-width:820px){.mid{padding:8px 58px}.row,.foot{grid-template-columns:58px 1fr 38px 38px 62px 62px 62px;gap:4px}.bx{height:44px}.bx input{font-size:10px}.obe{width:52px}}
+body{background:#000;font-family:'Cairo',sans-serif;display:flex;justify-content:center;padding:6px}
+.wrap{width:100%;max-width:1150px;background:#000;border:3px solid #d4af37;border-radius:16px;position:relative;overflow:hidden;box-shadow:0 0 60px rgba(212,175,55,.5)}
+.obe{position:absolute;top:0;bottom:0;width:80px;background:linear-gradient(180deg,#ffef9a,#d4a017 18%,#7a5a00 45%,#e0b02e 78%,#4a3600);display:flex;flex-direction:column;align-items:center;padding:10px 2px;z-index:1}
+.obe.l{left:0;border-right:2px solid #ffd700}.obe.r{right:0;border-left:2px solid #ffd700}
+.mid{padding:12px 92px 12px;position:relative;z-index:2}
+.head{text-align:center;border:2px solid #5a4d00;border-radius:10px;padding:10px;margin-bottom:12px;background:linear-gradient(180deg,#1a1700,#000)}
+.head h1{font-size:34px;font-weight:900;color:#ffdd55;text-shadow:0 0 18px #ffae00}
+.level{display:grid;grid-template-columns:100px 1fr;gap:0;border:1.5px solid #c9a227;margin-bottom:6px;border-radius:8px;overflow:hidden;background:#0f0c00}
+.lname{background:#1a1600;color:#ffd84d;font-weight:900;font-size:12px;display:flex;align-items:center;justify-content:center;border-left:1.5px solid #c9a227}
+.cells{display:grid;grid-template-columns:2.2fr .6fr .6fr 1fr 1fr 1fr}
+.cell{border-left:1px solid #4a4000;display:flex;flex-direction:column}
+.cell small{font-size:7px;color:#c9a227;text-align:center;padding:2px 0;background:#000;font-weight:800}
+.cell input{flex:1;background:#000;color:#fff6c0;border:0;outline:0;text-align:center;font-family:monospace;font-size:11px;font-weight:800;padding:8px 2px}
+.ref{display:grid;grid-template-columns:100px 1fr;gap:0;border:1.5px solid #c9a227;border-radius:8px;overflow:hidden;margin-top:6px;background:#0f0c00}
+.refcells{display:grid;grid-template-columns:2.2fr .6fr .6fr 1fr 1fr 1fr}
+.rcell{border-left:1px solid #4a4000;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6px 2px;color:#d4bc72;font-size:8px;text-align:center}
+.rcell b{font-size:10px;color:#ffd84d}
+.btns{display:flex;gap:8px;justify-content:center;margin:14px 0;flex-wrap:wrap}
+.btn{padding:10px 20px;border-radius:22px;border:2px solid #9a7d22;background:linear-gradient(180deg,#ffef9a,#d4a017 60%,#7a5900);color:#1a1200;font-weight:900;font-family:'Cairo';font-size:12px;cursor:pointer}
+.boxs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ta{width:100%;min-height:86px;background:#000;color:#ffe8a0;border:1px solid #3a3000;border-radius:8px;padding:8px;font-family:monospace;font-size:10px;direction:ltr;word-break:break-all}
+.coregrid{margin-top:10px;border:1.5px solid #c9a227;border-radius:10px;padding:8px;background:#080700}
+.cgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin-top:6px}
+.citem{aspect-ratio:1;border:1px solid #5a4d00;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px;background:#000}
+@media(max-width:780px){.mid{padding:10px 8px}.obe{display:none}.level{grid-template-columns:1fr}.lname{padding:6px;border-left:0;border-bottom:1px solid #c9a227}.cells{grid-template-columns:1fr 1fr 1fr}.ref{grid-template-columns:1fr}.refcells{grid-template-columns:repeat(3,1fr)}.boxs{grid-template-columns:1fr}.cgrid{grid-template-columns:repeat(6,1fr)}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<div class="obe l"><div style="width:0;height:0;border-left:34px solid transparent;border-right:34px solid transparent;border-bottom:38px solid #ffef9a;filter:drop-shadow(0 0 6px gold)"></div><div style="writing-mode:vertical-rl;font-weight:900;color:#2a1d00;font-size:12px;letter-spacing:3px">𓂀 ZOUBAN 𓋹</div><div style="width:66px;height:12px;background:#1c1400;border:1px solid #a6861e"></div></div>
-<div class="obe r"><div style="width:0;height:0;border-left:34px solid transparent;border-right:34px solid transparent;border-bottom:38px solid #ffef9a;filter:drop-shadow(0 0 6px gold)"></div><div style="writing-mode:vertical-rl;font-weight:900;color:#2a1d00;font-size:12px;letter-spacing:3px">𓂀 ZOUBAN 𓋹</div><div style="width:66px;height:12px;background:#1c1400;border:1px solid #a6861e"></div></div>
+<div class="obe l"><div style="font-size:28px">🔺</div><div style="writing-mode:vertical-rl;font-weight:900;color:#2a1d00;font-size:12px;margin-top:10px">ZOUBAN</div></div>
+<div class="obe r"><div style="font-size:28px">🔺</div><div style="writing-mode:vertical-rl;font-weight:900;color:#2a1d00;font-size:12px;margin-top:10px">ZOUBAN</div></div>
 <div class="mid">
-<div class="head"><div style="font-size:26px;filter:drop-shadow(0 0 10px gold)">🪽</div><h1>الرقم الموحد</h1><p>ZOUBAN UNIFIED NUMBER SYSTEM</p></div>
-<div id="grid"></div>
-<div class="foot" id="foot"></div>
+<div class="head"><div style="font-size:30px">🪽</div><h1>الرقم الموحد</h1><p style="color:#d2b56a;letter-spacing:1px;font-size:11px">ZOUBAN UNIFIED NUMBER SYSTEM - 30 خانه = 6 رموز ذهبيه</p></div>
+<div id="levels"></div>
+<div class="ref">
+<div class="lname">المرجع الذهبى<br>6 رموز = 30</div>
+<div class="refcells">
+<div class="rcell"><span style="font-size:18px">🪶</span><b>ريشه (18)</b><span>RISHA</span></div>
+<div class="rcell"><span style="font-size:18px">🧱</span><b>بلوك (1)</b><span>BLOCK</span></div>
+<div class="rcell"><span style="font-size:18px">🔺</span><b>ضلع (1)</b><span>DILA</span></div>
+<div class="rcell"><span style="font-size:18px">🔻</span><b>هرم (3)</b><span>HARAM</span></div>
+<div class="rcell"><span style="font-size:18px">🌙</span><b>هلال (3)</b><span>HILAL</span></div>
+<div class="rcell"><span style="font-size:18px">🏺</span><b>خرطوش (3)</b><span>KHARTOUSH</span></div>
+</div>
+</div>
 <div class="btns">
 <button class="btn" onclick="calc()">تحويل</button>
 <button class="btn" onclick="calc()">إلى عشري</button>
 <button class="btn" onclick="toBin()">01 إلى ثنائي 01</button>
-<button class="btn" onclick="toCore()">إلى كور</button>
+<button class="btn" onclick="toCore()">إلى كور 🪶🧱</button>
 </div>
-<div class="pans">
-<div class="pan"><h3>🔢 عشري كبير - 146 رقم (القيمة محفوظة)</h3><textarea id="dec" class="ta"></textarea><div id="dinfo" style="font-size:9px;color:#7a6a3a;margin-top:4px"></div></div>
-<div class="pan"><h3>💻 ثنائي 01 (القيمة محفوظة)</h3><textarea id="bin" class="ta"></textarea><div id="binfo" style="font-size:9px;color:#7a6a3a;margin-top:4px"></div></div>
-<div class="pan" style="grid-column:1/-1"><h3>👁️ كور - 🪶 ريشة=0 🧱 بلوك=1 (الكور محفوظ)</h3><div id="coreV" class="core"></div><textarea id="coreR" class="ta" style="min-height:56px;margin-top:6px"></textarea></div>
-<div class="pan" style="grid-column:1/-1"><h3>📊 تفصيلة الـ 30 خانة - 6 رموز ذهبية</h3><textarea id="detail" class="ta" style="min-height:160px"></textarea></div>
+<div class="boxs">
+<div><small style="color:#ffd84d">🔢 عشري كبير - القيمه محفوظه</small><textarea id="dec" class="ta"></textarea></div>
+<div><small style="color:#ffd84d">💻 ثنائي 01 - القيمه محفوظه</small><textarea id="bin" class="ta"></textarea></div>
+<div style="grid-column:1/-1"><small style="color:#ffd84d">👁️ كور - 🪶=0 🧱=1 - محفوظ</small><textarea id="coreText" class="ta" style="min-height:50px"></textarea></div>
+</div>
+<div class="coregrid">
+<div style="display:flex;justify-content:space-between;color:#ffd84d;font-size:10px"><span>🪶 ريشه = 0 | 🧱 بلوك = 1 - الكور الحقيقي</span><span id="coreCount"></span></div>
+<div id="coreGrid" class="cgrid"></div>
+</div>
 </div>
 </div>
 </div>
 <script>
 const F20=2432902008176640000n, BW=1000000000000000000n, DW=F20, HW=DW*6n, HLW=HW*1000n, KW=HLW*1000n, B=6000000000n*F20;
 const LV=[
-{id:5,lb:'5 المستوى',zbn:'ZBN-5A-7742-901K-88XP',b:'A',c:'B',h:'KHP',hl:'HLQ',k:'KTS'},
-{id:4,lb:'4 المستوى',zbn:'ZBN-4C-5531-220B-77MN',b:'B',c:'C',h:'HMR',hl:'HLB',k:'KTN'},
-{id:3,lb:'3 المستوى',zbn:'ZBN-3E-6677-554C-33PQ',b:'E',c:'O',h:'HMN',hl:'HME',k:'KTM'},
-{id:2,lb:'2 المستوى',zbn:'ZBN-3B-9918-443D-22QR',b:'K',c:'M',h:'HST',hl:'HLC',k:'KTW'},
-{id:1,lb:'1 المستوى',zbn:'ZBN-2D-3367-778E-44ST',b:'D',c:'N',h:'HSW',hl:'HLD',k:'KTF'}];
-function charVal(s){s=(s||'0').toUpperCase();let v=0;for(let ch of s){if(ch>='0'&&ch<='9')v=v*36+(ch.charCodeAt(0)-48);else if(ch>='A'&&ch<='Z')v=v*36+(ch.charCodeAt(0)-55);}return v;}
+{id:5, vals:["ZBN-5A-7742-901K-88XP","A","B","KHP","HLQ","KTS"]},
+{id:4, vals:["ZBN-4C-5531-220B-77MN","B","C","HMR","HLB","KTN"]},
+{id:3, vals:["ZBN-3E-6677-554C-33PQ","E","O","HMN","HME","KTM"]},
+{id:2, vals:["ZBN-3B-9918-443D-22QR","K","M","HST","HLC","KTW"]},
+{id:1, vals:["ZBN-2D-3367-778E-44ST","D","N","HSW","HLD","KTF"]}
+];
+const LABELS=[{name:"🏺 خرطوش 3"},{name:"🧱 بلوك 1"},{name:"🔺 ضلع 1"},{name:"🔻 هرم 3"},{name:"🌙 هلال 3"},{name:"🪶 ريشه 18"}];
+function charVal(s){s=(s||"0").toUpperCase();let v=0;for(let ch of s){if(ch>="0"&&ch<="9")v=v*36+(ch.charCodeAt(0)-48);else if(ch>="A"&&ch<="Z")v=v*36+(ch.charCodeAt(0)-55);}return v;}
 function build(){
-let g=document.getElementById('grid');g.innerHTML='';
+let cont=document.getElementById("levels");cont.innerHTML="";
 LV.forEach(L=>{
-let r=document.createElement('div');r.className='row';
-r.innerHTML=`<div class="lab">${L.lb}</div>
-<div class="bx"><input id="zbn${L.id}" value="${L.zbn}" oninput="calc()"></div>
-<div class="bx"><input id="b${L.id}" value="${L.b}" oninput="calc()"></div>
-<div class="bx"><input id="c${L.id}" value="${L.c}" oninput="calc()"></div>
-<div class="bx"><input id="h${L.id}" value="${L.h}" oninput="calc()"></div>
-<div class="bx"><input id="hl${L.id}" value="${L.hl}" oninput="calc()"></div>
-<div class="bx"><input id="k${L.id}" value="${L.k}" oninput="calc()"></div>`;
-g.appendChild(r);
+let div=document.createElement("div");div.className="level";
+let lname=`<div class="lname">المستوى ${L.id}</div>`;
+let cells=`<div class="cells">`+L.vals.map((v,i)=>`<div class="cell"><small>${LABELS[i].name}</small><input id="in${L.id}_${i}" value="${v}" oninput="calc()"></div>`).join("")+`</div>`;
+div.innerHTML=lname+cells;cont.appendChild(div);
 });
-document.getElementById('foot').innerHTML=`<div class="lab"></div>
-<div class="card"><span class="ic">🪶</span><span class="tx">ريشة (18)</span></div>
-<div class="card"><span class="ic">🧱</span><span class="tx">بلوك (1)</span></div>
-<div class="card"><span class="ic">🔺</span><span class="tx">ضلع (1)</span></div>
-<div class="card"><span class="ic">🔻</span><span class="tx">هرم (3)</span></div>
-<div class="card"><span class="ic">🌙</span><span class="tx">هلال (3)</span></div>
-<div class="card"><span class="ic">🏺</span><span class="tx">خرطوش (3)</span></div>`;
 }
 function calc(){
-let total=0n; let det='';
+let total=0n;
 LV.forEach(L=>{
-let z=document.getElementById('zbn'+L.id).value||'0';
-let bv=charVal(document.getElementById('b'+L.id).value);
-let cv=charVal(document.getElementById('c'+L.id).value);
-let hv=charVal(document.getElementById('h'+L.id).value);
-let hlv=charVal(document.getElementById('hl'+L.id).value);
-let kv=charVal(document.getElementById('k'+L.id).value);
-let zv=BigInt(charVal(z)%1000000);
+let zv=BigInt(charVal(document.getElementById(`in${L.id}_0`).value)%1000000);
+let bv=charVal(document.getElementById(`in${L.id}_1`).value);
+let cv=charVal(document.getElementById(`in${L.id}_2`).value);
+let hv=charVal(document.getElementById(`in${L.id}_3`).value);
+let hlv=charVal(document.getElementById(`in${L.id}_4`).value);
+let kv=charVal(document.getElementById(`in${L.id}_5`).value);
 let v=zv+BigInt(bv)*BW+BigInt(cv)*DW+BigInt(hv)*HW+BigInt(hlv)*HLW+BigInt(kv)*KW;
 total+=v*B;
-det+=`م${L.id}: ZBN=${z} | B=${bv} C=${cv} H=${hv} HL=${hlv} K=${kv} => ${v}\n`;
 });
-document.getElementById('dec').value=total.toString();
-document.getElementById('dinfo').innerText='طول: '+total.toString().length+' رقم - القيمة محفوظة';
-document.getElementById('detail').value=det+'\nالإجمالي: '+total;
-toBin(); toCore();
+document.getElementById("dec").value=total.toString();
+let bin=total.toString(2);
+document.getElementById("bin").value=bin;
+document.getElementById("coreText").value=bin.replace(/0/g,"🪶").replace(/1/g,"🧱");
+let grid=document.getElementById("coreGrid");grid.innerHTML="";
+document.getElementById("coreCount").innerText=`الطول ${bin.length} رمز - 30 خانه`;
+let show=bin.slice(-120);
+for(let ch of show){
+let d=document.createElement("div");d.className="citem";d.innerText=ch==="0"?"🪶":"🧱";grid.appendChild(d);
 }
-function toBin(){
-let d=document.getElementById('dec').value; if(!d)return; try{let b=BigInt(d).toString(2); document.getElementById('bin').value=b; document.getElementById('binfo').innerText='طول: '+b.length+' بت';}catch(e){}
 }
-function toCore(){
-let b=document.getElementById('bin').value; if(!b)return; let core=b.replace(/0/g,'🪶').replace(/1/g,'🧱'); document.getElementById('coreV').innerText=core; document.getElementById('coreR').value=core;
-}
-build(); calc();
+function toBin(){calc()} function toCore(){calc();}
+build();calc();
 </script>
 </body>
 </html>
